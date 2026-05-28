@@ -5,24 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>歐芙迪茉 三效蘊黑豐髮精華露｜試用回饋問卷</title>
 <style>
-/* ── Reset ── */
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Noto Sans TC',sans-serif;background:#f5f5f2;color:#1a1a1a;line-height:1.6;font-size:15px}
-
-/* ── Layout ── */
 .page{max-width:680px;width:100%;margin:0 auto;padding:1.5rem 1rem 3rem}
 
-/* ── Brand Header ── */
 .brand-bar{background:#1a3a28;border-radius:12px;padding:1.5rem 1.75rem;margin-bottom:1rem}
 .brand-bar h1{font-size:clamp(15px,3.5vw,19px);font-weight:600;color:#fff;margin-bottom:4px;line-height:1.4}
 .brand-bar p{font-size:clamp(11px,2.5vw,13px);color:rgba(255,255,255,0.6)}
 
-/* ── Cards ── */
 .card{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:.9rem}
 .sec-title{font-size:11px;font-weight:600;color:#2d5a3d;letter-spacing:.08em;text-transform:uppercase;padding-bottom:9px;border-bottom:1px solid #eee;margin-bottom:1rem;display:flex;align-items:center;gap:6px}
 .sec-title svg{width:14px;height:14px;stroke:#2d5a3d;fill:none;stroke-width:2;flex-shrink:0}
 
-/* ── Feature List ── */
+/* 商品圖片 */
+.product-img-wrap{width:100%;border-radius:10px;overflow:hidden;margin-bottom:1rem;background:#f0f0ec;text-align:center}
+.product-img-wrap img{width:100%;max-height:320px;object-fit:contain;display:block;padding:0.5rem}
+
 .feature-list{display:flex;flex-direction:column}
 .feat-item{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #f0f0ec}
 .feat-item:last-child{border-bottom:none;padding-bottom:0}
@@ -30,71 +28,57 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue','Noto Sans TC
 .feat-title{font-size:clamp(13px,2.5vw,14px);font-weight:600;color:#1a1a1a;margin-bottom:4px}
 .feat-desc{font-size:clamp(12px,2.2vw,13px);color:#555;line-height:1.65}
 
-/* ── Pills ── */
 .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
 .pill{background:#eaf3de;color:#27500A;border-radius:20px;padding:4px 12px;font-size:clamp(11px,2vw,12px);font-weight:500}
 
-/* ── Usage Steps ── */
-.usage-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:.9rem}
+/* 使用方式 */
+.usage-title{font-size:13px;font-weight:600;color:#2d5a3d;margin-top:1.1rem;margin-bottom:.5rem;letter-spacing:.03em}
+.usage-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .use-step{background:#f7f7f4;border-radius:8px;padding:10px 13px}
 .use-num{font-size:20px;font-weight:700;color:#2d5a3d;line-height:1;margin-bottom:4px}
 .use-txt{font-size:clamp(11px,2vw,13px);color:#555;line-height:1.55}
 
-/* ── Divider ── */
 .divider{height:1px;background:#f0f0ec;margin:.9rem 0}
 
-/* ── Questions ── */
 .q-item{margin-bottom:1rem}
 .q-item:last-child{margin-bottom:0}
 .q-label{font-size:clamp(13px,2.5vw,14px);color:#1a1a1a;margin-bottom:8px;line-height:1.55}
 .q-num{font-weight:600;color:#2d5a3d;margin-right:3px}
 .q-sub{font-size:11px;color:#999;margin-left:3px}
 
-/* ── Radio / Checkbox ── */
 .radio-group,.check-group{display:flex;flex-direction:column;gap:8px}
 .r-row,.c-row{display:flex;align-items:center;gap:9px;font-size:clamp(12px,2.2vw,13px);color:#444;cursor:pointer;line-height:1.4}
 .r-row input,.c-row input{width:16px;height:16px;flex-shrink:0;cursor:pointer;accent-color:#2d5a3d}
 
-/* ── Star Rating ── */
 .star-row{display:flex;gap:6px;flex-wrap:wrap}
-.star-btn{width:clamp(32px,9vw,36px);height:clamp(32px,9vw,36px);border:1px solid #ddd;border-radius:8px;background:#f7f7f4;font-size:clamp(16px,4.5vw,18px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s;user-select:none}
+.star-btn{width:clamp(32px,9vw,36px);height:clamp(32px,9vw,36px);border:1px solid #ddd;border-radius:8px;background:#f7f7f4;font-size:clamp(16px,4.5vw,18px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;user-select:none}
 .star-btn.on{background:#fac775;border-color:#BA7517}
 
-/* ── 1–10 Scale ── */
 .scale-wrap{display:flex;flex-direction:column;gap:5px}
 .scale-row{display:flex;gap:5px;flex-wrap:wrap}
 .sc-btn{min-width:clamp(30px,7.5vw,38px);height:clamp(30px,7.5vw,38px);border:1px solid #ddd;border-radius:8px;background:#f7f7f4;font-size:clamp(12px,2vw,13px);font-weight:600;cursor:pointer;color:#666;display:flex;align-items:center;justify-content:center;transition:background .15s;user-select:none}
 .sc-btn.on{background:#2d5a3d;color:#fff;border-color:#2d5a3d}
 .sc-labels{display:flex;justify-content:space-between;font-size:11px;color:#aaa}
 
-/* ── Inputs ── */
 textarea,input[type=text]{width:100%;font-size:clamp(12px,2.2vw,13px);font-family:inherit;color:#1a1a1a;background:#f7f7f4;border:1px solid #ddd;border-radius:8px;padding:9px 12px;outline:none;resize:vertical;transition:border-color .15s}
 textarea{min-height:68px}
 input[type=text]{height:38px;resize:none}
 textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
 
-/* ── 2-col grid ── */
-.field-2col{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .field-group{display:flex;flex-direction:column;gap:5px}
 .field-lbl{font-size:clamp(11px,2vw,12px);color:#666;font-weight:500}
 
-/* ── Staff note ── */
-.staff-note{font-size:clamp(11px,2vw,12px);color:#888;margin-bottom:.9rem;padding:8px 12px;background:#f7f7f4;border-left:3px solid #2d5a3d}
-
-/* ── Submit ── */
 .submit-area{text-align:center;margin-top:1.4rem}
 .submit-btn{background:#2d5a3d;color:#fff;border:none;border-radius:8px;padding:13px 0;font-size:clamp(13px,2.5vw,15px);font-weight:600;cursor:pointer;font-family:inherit;width:100%;max-width:320px;letter-spacing:.02em;transition:background .15s}
 .submit-btn:hover{background:#1f4029}
 .submit-btn:disabled{background:#aaa;cursor:not-allowed}
 .note-sm{font-size:11px;color:#aaa;margin-top:7px}
 
-/* ── Toast ── */
 .toast{display:none;position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#1a3a28;color:#fff;padding:12px 24px;border-radius:8px;font-size:13px;z-index:999;white-space:nowrap}
 .toast.show{display:block}
 
-/* ── Responsive ── */
 @media(max-width:420px){
-  .usage-row,.field-2col{grid-template-columns:1fr}
+  .usage-row{grid-template-columns:1fr}
   .page{padding:1rem .75rem 2.5rem}
   .card{padding:1rem 1rem}
   .brand-bar{padding:1.2rem 1.25rem}
@@ -115,6 +99,11 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       商品介紹
     </div>
+
+    <div class="product-img-wrap">
+      <img src="https://tecnicasalon.com/cdn/shop/files/514463994653179985.jpg?v=1719985704" alt="歐芙迪茉 三效蘊黑豐髮精華露" loading="lazy">
+    </div>
+
     <div class="feature-list">
       <div class="feat-item">
         <div class="feat-icon">🇯🇵</div>
@@ -152,6 +141,7 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
         </div>
       </div>
     </div>
+
     <div class="pill-row">
       <span class="pill">植物由來成分</span>
       <span class="pill">海藻複合物</span>
@@ -159,6 +149,8 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
       <span class="pill">GMP認定工場</span>
       <span class="pill">沙龍專賣</span>
     </div>
+
+    <div class="usage-title">使用方式</div>
     <div class="usage-row">
       <div class="use-step">
         <div class="use-num">01</div>
@@ -233,13 +225,13 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
     </div>
     <div class="divider"></div>
     <div class="q-item">
-      <div class="q-label"><span class="q-num">Q6.</span>Jet Spray 噴頭使用便利性</div>
+      <div class="q-label"><span class="q-num">Q6.</span>試用瓶的整體使用體驗</div>
       <div class="radio-group">
-        <label class="r-row"><input type="radio" name="spray" value="非常符合，能精準噴到頭皮"> 非常符合，能精準噴到頭皮</label>
-        <label class="r-row"><input type="radio" name="spray" value="大致符合"> 大致符合</label>
+        <label class="r-row"><input type="radio" name="spray" value="非常好，使用順手"> 非常好，使用順手</label>
+        <label class="r-row"><input type="radio" name="spray" value="大致良好"> 大致良好</label>
         <label class="r-row"><input type="radio" name="spray" value="普通"> 普通</label>
         <label class="r-row"><input type="radio" name="spray" value="稍有不便"> 稍有不便</label>
-        <label class="r-row"><input type="radio" name="spray" value="不符合，使用困難"> 不符合，使用困難</label>
+        <label class="r-row"><input type="radio" name="spray" value="不方便，使用困難"> 不方便，使用困難</label>
       </div>
     </div>
     <div class="divider"></div>
@@ -254,12 +246,12 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
     </div>
     <div class="divider"></div>
     <div class="q-item" style="margin-bottom:0">
-      <div class="q-label"><span class="q-num">Q8.</span>香味接受度</div>
+      <div class="q-label"><span class="q-num">Q8.</span>使用後的清涼感受</div>
       <div class="radio-group">
-        <label class="r-row"><input type="radio" name="scent" value="很喜歡"> 很喜歡</label>
-        <label class="r-row"><input type="radio" name="scent" value="可以接受"> 可以接受</label>
-        <label class="r-row"><input type="radio" name="scent" value="無特別感覺"> 無特別感覺</label>
-        <label class="r-row"><input type="radio" name="scent" value="不太喜歡"> 不太喜歡</label>
+        <label class="r-row"><input type="radio" name="scent" value="清涼感明顯，很舒適"> 清涼感明顯，很舒適</label>
+        <label class="r-row"><input type="radio" name="scent" value="有輕微清涼感"> 有輕微清涼感</label>
+        <label class="r-row"><input type="radio" name="scent" value="幾乎沒有感覺"> 幾乎沒有感覺</label>
+        <label class="r-row"><input type="radio" name="scent" value="清涼感過強，不舒適"> 清涼感過強，不舒適</label>
       </div>
     </div>
   </div>
@@ -321,7 +313,6 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
       <div class="check-group">
         <label class="c-row"><input type="checkbox" name="appeal" value="白髮改善功能（棕櫚酰二肽-52）"> 白髮改善功能（棕櫚酰二肽-52）</label>
         <label class="c-row"><input type="checkbox" name="appeal" value="天然植物與海藻成分"> 天然植物與海藻成分</label>
-        <label class="c-row"><input type="checkbox" name="appeal" value="Jet Spray噴頭設計精準方便"> Jet Spray 噴頭設計精準方便</label>
         <label class="c-row"><input type="checkbox" name="appeal" value="GMP認定製程，品質可信"> GMP 認定製程，品質可信</label>
         <label class="c-row"><input type="checkbox" name="appeal" value="日本製造與品牌背景"> 日本製造與品牌背景</label>
         <label class="c-row"><input type="checkbox" name="appeal" value="四路徑全面養護頭皮"> 四路徑全面養護頭皮</label>
@@ -334,42 +325,17 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
     </div>
   </div>
 
-  <!-- 服務業務專用 -->
+  <!-- 服務業務 -->
   <div class="card">
     <div class="sec-title">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
-      服務業務專用
+      服務業務
     </div>
-    <div class="staff-note">以下欄位由負責業務填寫，不需顧客填寫。</div>
-    <div class="q-item">
-      <div class="field-2col">
-        <div class="field-group">
-          <div class="field-lbl">負責業務姓名</div>
-          <input type="text" id="staff_name" placeholder="業務姓名">
-        </div>
-        <div class="field-group">
-          <div class="field-lbl">所屬門市／通路</div>
-          <input type="text" id="staff_store" placeholder="例：好藥局 台中店">
-        </div>
-      </div>
-    </div>
-    <div class="divider"></div>
-    <div class="q-item">
-      <div class="field-2col">
-        <div class="field-group">
-          <div class="field-lbl">試用品發放日期</div>
-          <input type="text" id="date_send" placeholder="yyyy/mm/dd">
-        </div>
-        <div class="field-group">
-          <div class="field-lbl">問卷回收日期</div>
-          <input type="text" id="date_collect" placeholder="yyyy/mm/dd">
-        </div>
-      </div>
-    </div>
-    <div class="divider"></div>
     <div class="q-item" style="margin-bottom:0">
-      <div class="field-lbl" style="margin-bottom:5px">業務備註</div>
-      <textarea id="staff_note" placeholder="顧客特殊需求、後續追蹤事項……"></textarea>
+      <div class="field-group">
+        <div class="field-lbl">負責業務姓名</div>
+        <input type="text" id="staff_name" placeholder="業務姓名">
+      </div>
     </div>
   </div>
 
@@ -384,11 +350,9 @@ textarea:focus,input[type=text]:focus{border-color:#2d5a3d;background:#fff}
 
 <script>
 // ═══════════════════════════════════════════════════════
-//  ★ 設定區：請在下方填入您的 Google Apps Script 網址
-//    步驟請見頁面下方的「串接說明」
+//  ★ 請將下方 YOUR_APPS_SCRIPT_URL_HERE 替換為您的 Google Apps Script 網址
 // ═══════════════════════════════════════════════════════
 var APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
-// ═══════════════════════════════════════════════════════
 
 var starVal = 0;
 var scaleVal = 0;
@@ -452,26 +416,22 @@ function submitForm() {
     String(now.getMinutes()).padStart(2,'0');
 
   var payload = {
-    timestamp:    ts,
-    name:         name,
-    gender:       getRadio('gender'),
-    age:          getRadio('age'),
-    concern:      getChecked('concern'),
-    star:         starVal ? String(starVal) + ' 顆星' : '',
-    spray:        getRadio('spray'),
-    texture:      getRadio('texture'),
-    scent:        getRadio('scent'),
-    effect:       getChecked('effect'),
-    timing:       getRadio('timing'),
-    scale10:      scaleVal ? String(scaleVal) + ' 分' : '',
-    buy:          getRadio('buy'),
-    appeal:       getChecked('appeal'),
-    comment:      document.getElementById('q_comment').value.trim(),
-    staff_name:   document.getElementById('staff_name').value.trim(),
-    staff_store:  document.getElementById('staff_store').value.trim(),
-    date_send:    document.getElementById('date_send').value.trim(),
-    date_collect: document.getElementById('date_collect').value.trim(),
-    staff_note:   document.getElementById('staff_note').value.trim()
+    timestamp:   ts,
+    name:        name,
+    gender:      getRadio('gender'),
+    age:         getRadio('age'),
+    concern:     getChecked('concern'),
+    star:        starVal ? starVal + ' 顆星' : '',
+    experience:  getRadio('spray'),
+    texture:     getRadio('texture'),
+    cooling:     getRadio('scent'),
+    effect:      getChecked('effect'),
+    timing:      getRadio('timing'),
+    scale10:     scaleVal ? scaleVal + ' 分' : '',
+    buy:         getRadio('buy'),
+    appeal:      getChecked('appeal'),
+    comment:     document.getElementById('q_comment').value.trim(),
+    staff_name:  document.getElementById('staff_name').value.trim()
   };
 
   fetch(APPS_SCRIPT_URL, {
@@ -496,58 +456,32 @@ function submitForm() {
 <!--
 ═══════════════════════════════════════════════════════════════
   Google Sheets 串接說明
-  完成以下步驟後，每筆問卷回答會自動寫入指定的 Google 試算表。
 ═══════════════════════════════════════════════════════════════
 
-【步驟一】建立 Google 試算表
-  1. 開啟 Google 試算表，新增一份試算表。
-  2. 在第一列（A1 起）依序填入以下欄位標題：
-     時間戳記 | 姓名 | 性別 | 年齡層 | 試用前困擾 |
-     整體滿意度 | 噴頭便利性 | 頭皮觸感 | 香味接受度 |
-     改善項目 | 感受成效時間 | 整體評分 | 購買意願 |
-     最吸引特點 | 心得與建議 |
-     業務姓名 | 所屬門市 | 發放日期 | 回收日期 | 業務備註
+【步驟一】試算表第一列欄位標題（依序貼入 A1 起）：
+  時間戳記 | 姓名 | 性別 | 年齡層 | 試用前困擾 |
+  整體滿意度 | 試用體驗 | 頭皮觸感 | 清涼感受 |
+  改善項目 | 感受成效時間 | 整體評分 | 購買意願 |
+  最吸引特點 | 心得與建議 | 業務姓名
 
-【步驟二】建立 Apps Script
-  1. 在該試算表，點選「擴充功能」→「Apps Script」。
-  2. 刪除預設內容，貼上以下程式碼後儲存：
-
-  ───────────────────────────────────────
+【步驟二】Apps Script 程式碼：
   function doPost(e) {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     var data = JSON.parse(e.postData.contents);
     sheet.appendRow([
       data.timestamp, data.name, data.gender, data.age,
-      data.concern, data.star, data.spray, data.texture,
-      data.scent, data.effect, data.timing, data.scale10,
-      data.buy, data.appeal, data.comment,
-      data.staff_name, data.staff_store,
-      data.date_send, data.date_collect, data.staff_note
+      data.concern, data.star, data.experience, data.texture,
+      data.cooling, data.effect, data.timing, data.scale10,
+      data.buy, data.appeal, data.comment, data.staff_name
     ]);
     return ContentService
       .createTextOutput(JSON.stringify({result:'success'}))
       .setMimeType(ContentService.MimeType.JSON);
   }
-  ───────────────────────────────────────
 
 【步驟三】部署為網路應用程式
-  1. 點選右上角「部署」→「新增部署」。
-  2. 類型選「網路應用程式」。
-  3. 執行身分：「我自己（your@email.com）」。
-  4. 誰可以存取：「所有人」。
-  5. 點選「部署」，複製產生的「網路應用程式網址」。
-
-【步驟四】填入本 HTML 檔案
-  1. 用文字編輯器開啟本 HTML 檔案。
-  2. 找到以下這一行：
-     var APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
-  3. 將 'YOUR_APPS_SCRIPT_URL_HERE' 替換為步驟三複製的網址。
-  4. 儲存檔案，即可開始使用。
-
-注意事項：
-  - 每次修改 Apps Script 程式碼後，需重新「部署」並更新網址。
-  - 建議搭配 Google 試算表的篩選功能整理回饋資料。
-  - 本 HTML 可直接在本地端開啟使用，或上傳至任何網頁伺服器。
+  執行身分：我自己 ／ 誰可以存取：所有人
+  複製網址後填入 APPS_SCRIPT_URL 變數。
 ═══════════════════════════════════════════════════════════════
 -->
 </body>
